@@ -56,3 +56,20 @@ input:-webkit-autofill {
   background-color: #f7f7f7;
   height: calc(100vh - 110px - 24px);
 }
+
+.header{
+  background-color: #fff;
+}
+
+.innner{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.nav{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
