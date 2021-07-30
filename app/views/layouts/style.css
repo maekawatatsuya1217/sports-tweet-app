@@ -1,0 +1,58 @@
+/* リセットCSS */
+
+* {
+    box-sizing: border-box;
+}
+  
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+  
+li {
+  list-style: none;
+}
+  
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border-radius: 15px;
+}
+  
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+input{
+  height: 30px;
+  width: 400px;
+  outline: none;
+}
+
+input:-webkit-autofill {
+  border: thin solid rgb(53, 53, 53);
+  box-shadow: 0 0 0 1000px white inset;
+}
+
+.main{
+  background-color: #f7f7f7;
+  height: calc(100% - 110px - 24px);
+}
+
+.another_main{
+  background-color: #f7f7f7;
+  height: calc(100vh - 110px - 24px);
+}
