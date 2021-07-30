@@ -73,3 +73,30 @@ input:-webkit-autofill {
   justify-content: space-between;
   align-items: center;
 }
+
+.logo{
+  width: 200px;
+  font-size: 25px;
+  background-color: rgb(224, 193, 254);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.nav_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left:  20px;
+  font-size: 0.8em;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(123, 123, 123) solid;
+  transition: 0.4s ease;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.nav_btn:hover{
+  color: black;
+  background: rgb(224, 193, 254);
+  border-radius: 15px;
+}
