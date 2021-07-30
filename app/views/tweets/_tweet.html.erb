@@ -1,0 +1,13 @@
+<div class="card">
+  <%= link_to image_tag(tweet.image, class: :card_img ), tweet_path(tweet.id) %>
+  <div class="card_body">
+    <%= link_to tweet.title, tweet_path(tweet.id), class: :card_title%>
+    <p class="card_summary">
+      <%= tweet.catch_copy %>
+    </p>
+    <div class="card_bottom_area">
+      <%= link_to tweet.user.name, user_path(tweet.user.id), class: :card_user %>
+      <%= tweet.category.name %>
+    </div>
+  </div>
+</div>
