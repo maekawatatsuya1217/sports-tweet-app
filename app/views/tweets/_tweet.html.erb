@@ -5,9 +5,6 @@
     <p class="card_summary">
       <%= tweet.catch_copy %>
     </p>
-    <div class="card_bottom_area">
-      <%= link_to tweet.user.name, user_path(tweet.user.id), class: :card_user %>
-      <%= tweet.category.name %>
-    </div>
+    <%= link_to tweet.user.name, user_path(tweet.user.id), class: :card_user %>
   </div>
 </div>

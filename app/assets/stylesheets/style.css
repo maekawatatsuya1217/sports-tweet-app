@@ -48,13 +48,11 @@ input:-webkit-autofill {
 }
 
 .main{
-  background-color: #f7f7f7;
-  height: calc(100% - 110px - 24px);
+  height: calc(100% - 120px - 35px);
 }
 
 .another_main{
-  background-color: #f7f7f7;
-  height: calc(100vh - 110px - 24px);
+  height: calc(100vh - 120px - 35px);
 }
 
 /* ヘッダー */
