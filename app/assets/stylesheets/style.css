@@ -102,6 +102,10 @@ input:-webkit-autofill {
   border-radius: 15px;
 }
 
+.fa-user{
+  margin-left: 100px;
+}
+
 /* メイン */
 
 .blog_edit_back{
