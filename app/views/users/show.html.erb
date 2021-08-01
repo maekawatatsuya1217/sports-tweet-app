@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="inner">
+    <div class="user_wrapper">
+    <div class="show_header_top"></div>
+      <h2 class="show_header">
+        <%= "#{@user.name}さんの情報"%>
+      </h2>
+
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <div class="user_edit_parent">
+          <%= link_to "編集", edit_user_path(@user), class: :user_edit_child %>
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
+        </div>
+      <% else %>
+        <div class="user_edit_parent">
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
+        </div>
+      <% end %>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table_col1">名前</th>
+            <td class="table_col2"><%= @user.name %></td>
+          </tr>
+          <tr>
+            <th class="table_col1">好きなスポーツ</th>
+            <td class="table_col2"><%= safe_join(@user.favorite_sport.split("\n"),tag(:br)) %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table_bottom_space"></div>
+
+      <h2 class="page_heading user_name">
+        <%= "#{@user.name}さんのツイート一覧"%>
+      </h2>
+
+      <div class="user_card">
+        <%= render partial: 'tweets/tweet', collection: @tweet %>
+      </div>
+      
+      <div class="user_card_bottom"></div>
+    </div>
+  </div>
+</div>
