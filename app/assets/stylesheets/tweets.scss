@@ -97,4 +97,85 @@
   color: black;
   background: rgb(224, 193, 254);
 }
-  
+
+// 詳細ページ
+
+.tweet_wrapper{
+  min-height: calc(100vh - 161px);
+}
+
+.tweet_hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.tweet_user{
+  display: block;
+  font-size: 16px;
+  color: #999;
+  margin: 20px 0 5px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.tweet_image{
+  height: 180px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.tweet_manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.main_area{
+  height: calc(100vh - 120px - 35px);
+  width: calc(100vw - 300px);
+  background-color: #fff;
+  padding: 30px 50px 85px;
+  margin: 0 auto;
+}
+
+.tweet_content{
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+  height: 450px;
+  margin: 50px auto 0;
+  border-radius: 35px;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.catch_copy_area{
+  height: 410px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+  overflow: scroll;
+}
+
+.content_title{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.memo_content_text{
+  font-size: 15px;
+}
+
+.text_area{
+  height: 410px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+  overflow: scroll;
+}

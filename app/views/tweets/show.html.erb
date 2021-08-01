@@ -1,0 +1,42 @@
+<main class="main">
+  <div class="inner">
+    <div class="tweet_wrapper">
+      <p class="tweet_hedding">
+        <%= @tweet.title %>
+      </p>
+
+      <% if user_signed_in? && current_user.id == @tweet.user_id %>
+        <div class="tweet_manage">
+          <%= link_to "編集", root_path, class: :user_edit_child %>
+          <%= link_to "削除", root_path, method: :delete, class: :user_edit_child, data: { confirm: '本当に記事を削除しますか？' } %>
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
+        </div>
+      <% else %>
+        <div class="tweet_manage">
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
+        </div>
+      <% end %>
+      
+      <div class="tweet_image">
+        <%= image_tag @tweet.image, class: :card_img %>
+      </div>
+
+      <div class="main_area">
+        <div class="tweet_content">
+          <div class="catch_copy_area">
+            <div class="content_title">キャッチコピー</div>
+              <p class="tweet_content_text">
+                <%= safe_join(@tweet.catch_copy.split("\n"),tag(:br)) %>
+              </p>
+          </div>
+        <div class="text_area">
+          <div class="content_title">ツイート</div>
+              <p class="tweet_content_text">
+              <%= safe_join(@tweet.article.split("\n"),tag(:br)) %>
+              </p>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</main>
