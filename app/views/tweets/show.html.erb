@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @tweet.user_id %>
         <div class="tweet_manage">
           <%= link_to "編集", edit_tweet_path(@tweet), class: :user_edit_child %>
-          <%= link_to "削除", root_path, method: :delete, class: :user_edit_child, data: { confirm: '本当に記事を削除しますか？' } %>
+          <%= link_to "削除", tweet_path(@tweet), method: :delete, class: :user_edit_child, data: { confirm: '本当に記事を削除しますか？' } %>
           <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% else %>
