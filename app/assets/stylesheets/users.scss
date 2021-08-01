@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// 詳細ページ
+
 .user_wrapper{
   min-height: calc(100vh - 135px);
   width: 1024px;
@@ -82,4 +84,24 @@
 
 .user_card_bottom{
   height: 100px;
+}
+
+// 編集ページ
+
+.tweet_edit_back{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  text-align: center;
+  margin: 40px 685px 0;
+  font-size: 0.8em;
+  color: black;
+  background-color: #e6e6e6;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 15px;
+}
+
+.tweet_edit_back:hover{
+  color: black;
+  background: rgb(224, 193, 254);
 }
