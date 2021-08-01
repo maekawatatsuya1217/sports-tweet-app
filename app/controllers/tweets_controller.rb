@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :create]
+    before_action :authenticate_user!, only: [:new, :create, :edit]
+    before_action :tweet_build, only: [:show, :edit, :update]
+    before_action :unless, only: [:edit, :update]
 
     def index
         @tweets = Tweet.includes(:user).with_attached_image.order('created_at DESC')
@@ -19,12 +21,32 @@ class TweetsController < ApplicationController
     end
 
     def show
-        @tweet = Tweet.find(params[:id])
+    end
+
+    def edit
+    end
+
+    def update
+        if @tweet.update(tweet_params)
+            redirect_to tweet_path(@tweet)
+        else
+            render :edit
+        end
     end
 
     private
 
     def tweet_params
         params.require(:tweet).permit(:title, :catch_copy, :article, :image).merge(user_id: current_user.id)
+    end
+
+    def tweet_build
+        @tweet = Tweet.find(params[:id])
+    end
+
+    def unless
+        unless user_signed_in? && current_user.id == @tweet.user.id
+         redirect_to root_path
+        end 
     end
 end
