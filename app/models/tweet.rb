@@ -5,4 +5,7 @@ class Tweet < ApplicationRecord
         validates :article
         validates :image
     end
+
+    belongs_to :user
+    
 end

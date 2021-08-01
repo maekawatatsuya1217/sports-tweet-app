@@ -8,5 +8,7 @@ class User < ApplicationRecord
     validates :name
     validates :favorite_sport
   end
+
+  has_many :tweets
   
 end
