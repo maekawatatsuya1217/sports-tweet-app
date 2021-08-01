@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :tweet_build, only: [:show, :edit, :update, :destroy]
-    before_action :unless, only: [:edit, :update]
+    before_action :unless, only: [:edit, :update, :destroy]
 
     def index
         @tweets = Tweet.includes(:user).with_attached_image.order('created_at DESC')
