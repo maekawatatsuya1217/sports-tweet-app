@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, only: :edit
-    before_action :set_user, [:show, :edit, :update]
+    before_action :set_user, only: [:show, :edit, :update]
     before_action :unless, only: :edit
 
     def show
-        @tweets = @user.tweet.with_attached_image.order("created_at DESC")
+        @tweets = @user.tweets.with_attached_image.order("created_at DESC")
     end
 
     def edit

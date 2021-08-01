@@ -1,0 +1,9 @@
+<div class="main">
+  <%= link_to "戻る", 'javascript:history.back()', class: :tweet_edit_back %>
+  <div class="inner">
+    <div class="form_wrapper">
+      <h2 class="">新規ツイート投稿</h2>
+        <%= render partial: "form", locals: { tweet: @tweet } %>
+    </div>
+  </div>
+</div>
