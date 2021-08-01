@@ -8,7 +8,7 @@
 
       <% if user_signed_in? && current_user.id == @user.id %>
         <div class="user_edit_parent">
-          <%= link_to "編集", root_path, class: :user_edit_child %>
+          <%= link_to "編集", edit_user_path(@user), class: :user_edit_child %>
           <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% else %>
@@ -24,8 +24,8 @@
             <td class="table_col2"><%= @user.name %></td>
           </tr>
           <tr>
-            <th class="table_col1">お気に入りの本</th>
-            <td class="table_col2"><%= safe_join(@user.favorite_book.split("\n"),tag(:br)) %></td>
+            <th class="table_col1">好きなスポーツ</th>
+            <td class="table_col2"><%= safe_join(@user.favorite_sport.split("\n"),tag(:br)) %></td>
           </tr>
         </tbody>
       </table>
@@ -33,7 +33,7 @@
       <div class="table_bottom_space"></div>
 
       <h2 class="page_heading user_name">
-        <%= "#{@user.name}さんの記事一覧"%>
+        <%= "#{@user.name}さんのツイート一覧"%>
       </h2>
 
       <div class="user_card">
