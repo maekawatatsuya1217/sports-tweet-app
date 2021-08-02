@@ -15,22 +15,22 @@ RSpec.describe Tweet, type: :model do
       it 'titleが空だと投稿できない' do
         @tweet.title = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Title can't be blank")
+        expect(@tweet.errors.full_messages).to include("タイトルを入力してください")
       end
       it 'catch_copyが空だと投稿できない' do
         @tweet.catch_copy = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Catch copy can't be blank")
+        expect(@tweet.errors.full_messages).to include("キャッチコピーを入力してください")
       end
       it 'articleが空だと投稿できない' do
         @tweet.article = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Article can't be blank")
+        expect(@tweet.errors.full_messages).to include("ツイートを入力してください")
       end
       it 'imageが空だと投稿できない' do
         @tweet.image = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Image can't be blank")
+        expect(@tweet.errors.full_messages).to include("画像を入力してください")
       end
     end
   end

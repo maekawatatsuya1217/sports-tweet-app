@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        favorite_sport: 好きなスポーツ名
+      tweet:
+        title: タイトル
+        catch_copy: キャッチコピー
+        article: ツイート
+        image: 画像
