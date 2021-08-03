@@ -40,14 +40,14 @@
 
         <div class="container">
         <% if user_signed_in? %>
-          <%= form_with model: [@tweet, @comment],local: true do |f| %>
+          <%= form_with model: [@tweet, @comment],local: true, id: "form" do |f| %>
             <%= f.text_area :text, placeholder: "コメントする", class: :comment_area, id: "content" %>
             <%= f.submit "SEND", class: :comment_submit, id: "submit" %>
           <% end %>
         <% end %>
         </div>
 
-        <div class="comments_parent">
+        <div class="comments_parent" id="tweet" value=<%= @tweet.id %>>
           <div class="comments">
             <h4 class="comment_title">＜コメント一覧＞</h4>
             <div id="list"></div>
