@@ -5,7 +5,9 @@ class CommentsController < ApplicationController
     def create
         @comment = Comment.new(comment_params)
         if @comment.save
-            redirect_to tweet_path(@comment.tweet_id)
+            comment = Comment.find_by(comment_params)
+            user = User.find_by(id: comment.user_id)
+            render json:{ comment: comment, user: user }
         else
             @tweet = @comment.tweet
             @comments = @tweet.comments.includes(:user).order("created_at DESC")
