@@ -27,6 +27,11 @@ RSpec.describe Tweet, type: :model do
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include("ツイートを入力してください")
       end
+      it 'categoryが空だと投稿できない' do
+        @tweet.category_id = 1
+        @tweet.valid?
+        expect(@tweet.errors.full_messages).to include("カテゴリーを選択してください")
+      end
       it 'imageが空だと投稿できない' do
         @tweet.image = nil
         @tweet.valid?

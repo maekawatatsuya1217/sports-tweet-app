@@ -8,6 +8,7 @@ ja:
         title: タイトル
         catch_copy: キャッチコピー
         article: ツイート
+        category_id: カテゴリー
         image: 画像
       comment:
         text: コメント
