@@ -3,6 +3,7 @@ FactoryBot.define do
     title       {'スポーツ'}
     catch_copy  {'キャッチコピー'}
     article     {'ツイート本文'}
+    category_id { 2 }
 
     association :user
 

@@ -5,6 +5,11 @@
         <%= @tweet.title %>
       </p>
 
+      <div class="tweet_category_parent">
+        <%= link_to @tweet.user.name, user_path(@tweet.user_id), class: :tweet_user %>
+        <div class="tweet_category_child"><%= @tweet.category.name %></div>
+      </div>
+
       <% if user_signed_in? && current_user.id == @tweet.user_id %>
         <div class="tweet_manage">
           <%= link_to "編集", edit_tweet_path(@tweet), class: :user_edit_child %>

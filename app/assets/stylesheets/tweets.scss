@@ -1,6 +1,8 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// メイン
   
 .main_top{
   display: flex;
@@ -70,6 +72,14 @@
   margin-bottom: 25px;
   text-align: center;
 }
+
+.card_bottom_area{
+  display: flex;
+  color: #999;
+  justify-content: space-around;
+  font-size: 12px;
+  flex-direction: row-reverse;
+}
   
 .card_user {
   display: block;
@@ -98,6 +108,13 @@
   background: rgb(224, 193, 254);
 }
 
+// 新規投稿ページのカテゴリー
+
+.select-box{
+  height: 30px;
+  width: 400px;
+}
+
 // 詳細ページ
 
 .tweet_wrapper{
@@ -111,6 +128,12 @@
   margin-top: 50px;
 }
 
+.tweet_category_parent{
+  padding: 0 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .tweet_user{
   display: block;
   font-size: 16px;
@@ -118,6 +141,12 @@
   margin: 20px 0 5px 0;
   text-align: center;
   text-decoration: underline;
+}
+
+.tweet_category_child{
+  text-align: center;
+  color: #999;
+  margin: 20px 0 5px 0;
 }
 
 .tweet_image{
