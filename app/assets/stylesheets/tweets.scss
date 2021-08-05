@@ -137,6 +137,9 @@
   margin-left: 100px;
   border: 1px solid black;
   border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 475px;
 }
 
 .search-form .search-btn {
@@ -145,6 +148,30 @@
   border: 0px;
   background-color: rgb(230, 230, 230);
   border-radius: 15px;
+  position: absolute;
+  top: 180px;
+  left: 780px;
+}
+
+.search-form-b .search-input-b {
+  width: 200px;
+  margin-left: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 425px;
+}
+
+.search-form-b .search-btn-b {
+  width: 70px;
+  margin-left: 10px;
+  border: 0px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 15px;
+  position: absolute;
+  top: 180px;
+  left: 880px;
 }
 
 .hidden{
@@ -166,7 +193,11 @@
 }
 
 #q_category_id_eq{
+  height: 30px;
   border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 745px;
 }
 
 .search_back_btn:hover{
