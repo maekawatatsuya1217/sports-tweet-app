@@ -13,10 +13,15 @@
             <% end %>
         </div>
     </div>
+    <% if @tweets.length != 0 %>
         <div class="card_wrapper">
             <% @tweets.each do |tweet| %>
                 <%= render partial: "tweet", locals: { tweet: tweet } %>
             <% end %>
         </div>
+    <% else %>
+        <h2 class="no_result_text">検索結果が見つかりませんでした</h2>
+        <%= image_tag 'think_image.png', class: :think_img %>
+    <% end %>
    </div>
 </main>
