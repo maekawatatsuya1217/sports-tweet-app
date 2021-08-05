@@ -16,6 +16,7 @@
           <div class="nav_left">
             <%= link_to "Sports Tweet", root_path, class: :logo %>
           </div>
+
           <% if user_signed_in? %>
             <div class="nav_right">
             <%= link_to "ツイート", root_path, class: :nav_btn %>
@@ -29,6 +30,7 @@
               <%= link_to "新規登録", new_user_registration_path, class: :nav_btn %>
             </div>
           <% end %>
+
         </div>
       </div>
     </header>
