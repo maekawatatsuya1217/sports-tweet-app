@@ -14,7 +14,12 @@
     
   </div>
   </div>
+  <% if @tweets.length == 0 %>
+    <h2 class="tweet_post_message">ツイートを投稿して、他のユーザにシェアしましょう！</h2>
+    <%= image_tag 'new_tweet.png', class: :tweet_img %>
+  <% else %>
     <div class="card_wrapper">
         <%= render partial: 'tweet', collection: @tweets %>
     </div>
+  <% end %>
 </div>
