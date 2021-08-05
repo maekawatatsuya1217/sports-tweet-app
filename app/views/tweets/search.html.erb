@@ -1,0 +1,27 @@
+<main class="main">
+   <div class="inner">
+   <div class="main_search">
+        <%= link_to "戻る", 'javascript:history.back()', class: :search_back_btn %>
+        <p class="search" id="search">検索する</p>
+        <div class="hidden" id="pull-down">
+            <%= search_form_for @p, url: search_tweets_path, class: "search-form-b search-function" do |f| %>
+            <%= f.text_field :title_cont, placeholder: "タイトルを検索", class: "search-input-b" %>
+            <br>
+            <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: 'カテゴリーを選択' %>
+            <br>
+            <%= f.submit '検索', class: "search-btn-b" %>
+            <% end %>
+        </div>
+    </div>
+    <% if @tweets.length != 0 %>
+        <div class="card_wrapper">
+            <% @tweets.each do |tweet| %>
+                <%= render partial: "tweet", locals: { tweet: tweet } %>
+            <% end %>
+        </div>
+    <% else %>
+        <h2 class="no_result_text">検索結果が見つかりませんでした</h2>
+        <%= image_tag 'think_image.png', class: :think_img %>
+    <% end %>
+   </div>
+</main>

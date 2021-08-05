@@ -3,6 +3,13 @@
   <div class="header_bottom_content"></div>
   <div class="main_top">
     <%= link_to "新規投稿", new_tweet_path, class: :new_tweet_btn %>
+    <p class="search" id="search">検索する</p>
+    <div class="hidden" id="pull-down">
+      <%= search_form_for @p, url: search_tweets_path, class: "search-form" do |f| %>
+        <%= f.text_field :title_cont, placeholder: "タイトルを検索", class: "search-input" %>
+        <%= f.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
   </div>
   </div>
     <div class="card_wrapper">

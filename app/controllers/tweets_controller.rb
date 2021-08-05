@@ -2,9 +2,11 @@ class TweetsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :tweet_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
+    before_action :search_tweet, only: [:index, :search]
 
     def index
         @tweets = Tweet.includes(:user).with_attached_image.order('created_at DESC')
+        set_tweet_column
     end
 
     def new
@@ -41,6 +43,11 @@ class TweetsController < ApplicationController
         redirect_to root_path
     end
 
+    def search
+        @tweets = @p.result.includes(:user).with_attached_image.order('created_at DESC')
+        set_tweet_column
+    end
+
     private
 
     def tweet_params
@@ -55,5 +62,13 @@ class TweetsController < ApplicationController
         unless user_signed_in? && current_user.id == @tweet.user.id
          redirect_to root_path
         end 
+    end
+
+    def search_tweet
+        @p = Tweet.ransack(params[:q])
+    end
+
+    def set_tweet_column
+        @tweet_name = Tweet.select("title").distinct
     end
 end

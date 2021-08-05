@@ -21,11 +21,28 @@
   background-color: rgb(230, 230, 230);
   text-decoration: none;
   user-select: none;
-  margin: 0 auto;
   border-radius: 15px;
+  margin-left: 455px;
 }
   
 .new_tweet_btn:hover{
+  color: black;
+  background-color: rgb(224, 193, 254);
+}
+
+.search{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: black;
+  background-color: rgb(230, 230, 230);
+  text-decoration: none;
+  user-select: none;
+  border-radius: 15px;
+  margin-left: 100px;
+}
+  
+.search:hover{
   color: black;
   background-color: rgb(224, 193, 254);
 }
@@ -106,6 +123,109 @@
 .tweet_edit_back:hover{
   color: black;
   background: rgb(224, 193, 254);
+}
+
+// 検索機能
+
+.main_search{
+  display: flex;
+  margin: 0 0 0 330px;
+}
+
+.search-form .search-input {
+  width: 200px;
+  margin-left: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 475px;
+}
+
+.search-form .search-btn {
+  width: 70px;
+  margin-left: 10px;
+  border: 0px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 15px;
+  position: absolute;
+  top: 180px;
+  left: 780px;
+}
+
+.search-form-b .search-input-b {
+  width: 200px;
+  margin-left: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 425px;
+}
+
+.search-form-b .search-btn-b {
+  width: 70px;
+  margin-left: 10px;
+  border: 0px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 15px;
+  position: absolute;
+  top: 180px;
+  left: 880px;
+}
+
+.hidden{
+  display: none;
+}
+
+.search_back_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  text-align: center;
+  margin: 0 20px 0 250px;
+  font-size: 0.8em;
+  color: black;
+  background-color: #e6e6e6;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 15px;
+  height: 30px;
+}
+
+#q_category_id_eq{
+  height: 30px;
+  border-radius: 8px;
+  position: absolute;
+  top: 180px;
+  left: 745px;
+}
+
+.search_back_btn:hover{
+  color: black;
+  background-color: rgb(140, 250, 140);
+}
+
+.search-function{
+  display: flex;
+}
+
+.search-input-b{
+  width: 200px;
+  margin: 0 10px 0 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.no_result_text{
+  text-align: center;
+  padding: 70px 0 50px 0;
+  margin-top: 20px;
+}
+
+.think_img{
+  margin: 0px 0 60px 520px;
+  height: 290px;
+  width: 400px;
 }
 
 // 新規投稿ページのカテゴリー
