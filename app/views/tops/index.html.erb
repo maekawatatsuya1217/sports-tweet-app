@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <title>sports tweet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,5 +10,29 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <%# ヘッダーメニュー %>
+        <div class="header_menu">
+          <div class="area_logo_header">
+            <%= link_to image_tag("tweet_logo.png", class: :logo), root_path %>
+          </div>
+          <% if user_signed_in? %>
+          <div class="nav_right">
+            <%= link_to "ツイート", root_path, class: :nav_btn_top %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn_top %>
+            <i class="fas fa-user fa-fw"></i>
+            <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+          </div>  
+        <% else %>
+          <div class="nav_right">
+            <%= link_to "ツイート", root_path, class: :nav_btn_top %>
+            <%= link_to "ログイン", new_user_session_path, class: :nav_btn_top %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav_btn_top %>
+          </div>
+        <% end %>
+        </div>
+    </header>
+        </div>
+    </header>
   </body>
 </html>
