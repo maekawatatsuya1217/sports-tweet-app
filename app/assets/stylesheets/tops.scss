@@ -65,3 +65,64 @@
     font-size: 60px;
     margin: 0 10px;
 }
+
+// 2分割レイアウト
+
+.head_home{
+    display: block;
+}
+
+.head_message{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 65px;
+    margin-left: 110px;
+}
+
+.head_message_mini{
+    font-size: 20px;
+    color: #af9bff;
+    margin-left: 110px;
+}
+
+.area_top_page{
+    height: 600px;
+    padding: 50px;
+    margin: 70px 0;
+}
+
+.body_home{
+    padding: 0 20px;
+}
+
+.layout_2_div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 100px 50px 50px;
+}
+
+.layout_2_div > div{
+    width: 40%;
+}
+
+.text_home .ttl {
+    font-size: 37px;
+    margin: 20px 0 20px;
+}
+
+.text_home .description{
+    width: 550px;
+    font-size: 20px;
+    margin-top: 50px;
+    line-height: 35px;
+}
+
+.important_message{
+    font-size: 37px;
+    color: #af9bff;
+}
+
+.share_img{
+    margin-top: 32px;
+}
