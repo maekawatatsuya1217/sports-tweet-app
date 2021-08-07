@@ -45,7 +45,7 @@
       <div class="area_top_page">
         <div class="head_home">
           <div class="head_message">app details</div>
-          <div class="head_message_mini"><b>ーアプリの概要ー</b></div>
+          <div class="head_message_mini">ーアプリの概要ー</div>
         </div>
         <div class="body_home">
           <div class="layout_2_div">
@@ -60,10 +60,10 @@
         </div>
       </div>
       <%# アプリの機能 %>
-      <div class="area_top_page">
+      <div class="area_function">
         <div class="head_home">
           <div class="head_message">what we do</div>
-          <div class="head_message_mini"><b>ーアプリの機能ー</b></div>
+          <div class="head_message_mini">ーアプリの機能ー</div>
         </div>
         <div class="function_bottom_space"></div>
         <div class="body_home">
@@ -82,6 +82,26 @@
           <div class="app_function">
             <div class="function_name">コメント</div>
             <div class="function_description">ツイートしたチームに対してコメントを送ってみましょう。気軽にコミュニケーションを取れますし、チームへのお誘いを頂けるかもしれません。積極的にコメント機能を使用してみましょう。</div>
+          </div>
+        </div>
+      </div>
+      <%# try usingの部分 %>
+      <div class="area_try_using">
+        <div class="head_home">
+          <div class="head_message">try using</div>
+          <div class="head_message_mini">ーアプリを使ってみようー</div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="try_description">アプリを使って、スポーツチームに出会おう！<br><br>新規登録はたったの１分で完了します！<br><br>まずは右のボタンをクリック！<b class="right_btn">➡︎</b></p>
+            </div>
+            <div class="try_btn">
+              <P class="try_messages">初めての方はこちら！</P>
+              <%= link_to "新規登録", new_user_registration_path, class: :try_devise_btn %>
+              <P class="try_messages">登録済みの方はこちら！</P>
+              <%= link_to "ログイン", new_user_session_path, class: :try_devise_btn %>
+            </div>
           </div>
         </div>
       </div>

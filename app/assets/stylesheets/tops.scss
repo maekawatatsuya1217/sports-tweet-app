@@ -55,99 +55,140 @@
 }
 
 .just{
-    color: #af9bff;
-    font-size: 70px;
-    margin: 0 10px;
+  color: #af9bff;
+  font-size: 70px;
+  margin: 0 10px;
 }
 
 .team{
-    color: #af9bff;
-    font-size: 60px;
-    margin: 0 10px;
+  color: #af9bff;
+  font-size: 60px;
+  margin: 0 10px;
 }
 
 // 2分割レイアウト
 
 .head_home{
-    display: block;
+  display: block;
 }
 
 .head_message{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 65px;
-    margin-left: 110px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 65px;
+  margin-left: 110px;
 }
 
 .head_message_mini{
-    font-size: 20px;
-    color: #af9bff;
-    margin-left: 110px;
+  font-size: 20px;
+  margin-left: 110px;
 }
 
 .area_top_page{
-    height: 600px;
-    padding: 50px;
-    margin: 70px 0;
+  height: 600px;
+  padding: 50px;
+  margin: 70px 0;
 }
 
 .body_home{
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .layout_2_div{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 100px 50px 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 100px 50px 50px;
 }
 
 .layout_2_div > div{
-    width: 40%;
+  width: 40%;
 }
 
 .text_home .ttl {
-    font-size: 37px;
-    margin: 20px 0 20px;
+  font-size: 37px;
+  margin: 20px 0 20px;
 }
 
 .text_home .description{
-    width: 550px;
-    font-size: 20px;
-    margin-top: 50px;
-    line-height: 35px;
+  width: 550px;
+  font-size: 20px;
+  margin-top: 50px;
+  line-height: 35px;
 }
 
 .important_message{
-    font-size: 37px;
-    color: #af9bff;
+  font-size: 37px;
+  color: #af9bff;
 }
 
 .share_img{
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 // 機能部分
 
+.area_function{
+  height: 1020px;
+  padding: 50px;
+  margin: 70px 0;
+}
+
 .app_function{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
-    margin: 30px 0 0 200px;
-    height: 150px;
-    border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  margin: 30px 0 0 200px;
+  height: 150px;
+  border-bottom: 1px solid black;
 }
 
 .function_bottom_space{
-    height: 100px;
+  height: 100px;
 }
 
 .function_name{
-    font-size: 27px;
+  font-size: 27px;
 }
 
-.function_description{
-    
-    height: 120px;
-    width: 400px;
+.function_description{ 
+  height: 120px;
+  width: 400px;
+}
+
+// try usingの部分
+
+.area_try_using{
+  height: 400px;
+  padding: 50px;
+  margin: 70px 0;
+}
+
+.try_description{
+  font-size: 20px;
+}
+
+.right_btn{
+  font-size: 23px;
+    color: #d3c7ff;
+}
+
+.try_devise_btn{
+  text-align: center;
+  display: block;
+  padding: 10px;
+  margin: 15px;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(123, 123, 123) solid;
+  transition: 0.4s ease;
+  border-radius: 20px;
+  background-color: #e2dbff;
+}
+
+.try_messages{
+  font: 10px;
+  text-align: center;
 }
