@@ -195,6 +195,12 @@
 
 // フッター
 
+.top_footer{
+  height: 150px;
+  background-color: #e2dbff;
+  padding: 35px 300px;
+}
+
 .top_btn {
   color: #7b7b7b;
   width: 78px;
@@ -203,8 +209,6 @@
   text-decoration: underline;
 }
 
-.top_footer{
-  height: 100px;
-  background-color: #e2dbff;
-  padding: 35px 300px;
+.copyright{
+    text-align: center;
 }
