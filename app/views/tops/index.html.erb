@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <title>sports tweet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <%# ヘッダーメニュー %>
+        <div class="header_menu">
+          <div class="area_logo_header">
+            <%= link_to image_tag("tweet_logo.png", class: :logo), root_path %>
+          </div>
+          <% if user_signed_in? %>
+          <div class="nav_right">
+            <%= link_to "ツイート", tweets_path, class: :nav_btn_top %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn_top %>
+            <i class="fas fa-user fa-fw"></i>
+            <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+          </div>  
+        <% else %>
+          <div class="nav_right">
+            <%= link_to "ツイート", tweets_path, class: :nav_btn_top %>
+            <%= link_to "ログイン", new_user_session_path, class: :nav_btn_top %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav_btn_top %>
+          </div>
+        <% end %>
+        </div>
+    </header>
+    <%# メイン %>
+    <main>
+      <div class="area_top_view">
+        <div class="top_page_container" style="background-image: url('<%= asset_path('sports_image.png') %>')");>
+          <div class="top_message1">あなたに<b class="just">マッチ</b>した、</div>
+          <div class="top_message2"><b class="team">スポーツチーム</b>が見つかる</div>
+        </div>
+      </div>
+    </main>
+    <%# このアプリの概要 %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message">app details</div>
+          <div class="head_message_mini">ーアプリの概要ー</div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="ttl">あなたに<b class="important_message">マッチ</b>した<br>スポーツチームが<b class="important_message">見つかる</b></p>
+              <p class="description">「実力をつけたい！」「趣味で運動したい！」など様々な目的にあったチームを見つける事ができます。まずはコメントやチャットを使って、気軽にお話を聞いてみましょう！</p>
+            </div>
+            <div class="img">
+                <%= image_tag("detail.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%# アプリの機能 %>
+      <div class="area_function">
+        <div class="head_home">
+          <div class="head_message">what we do</div>
+          <div class="head_message_mini">ーアプリの機能ー</div>
+        </div>
+        <div class="function_bottom_space"></div>
+        <div class="body_home">
+          <div class="app_function">
+            <div class="function_name">つながり</div>
+            <div class="function_description">あなたが気になるチームや、所属したいチームに繋がりリクエストを送信することで、簡単にチームの方々と繋がる事ができます。魅力的なチームを見つけて、まずは気軽に繋がりましょう。</div>
+          </div>
+          <div class="app_function">
+            <div class="function_name">チャット</div>
+            <div class="function_description">参加してみたいチームに直接お話を聞いてみましょう。ツイートだけでは伝わらないことも詳しく聞く事ができます。もし参加意思がある時は、その場で体験をお願いすることも可能です。</div>
+          </div>
+          <div class="app_function">
+            <div class="function_name">ツイート</div>
+            <div class="function_description">所属しているチームでの活動記録などを気軽にシェアしましょう。シェアすることであなたのチームの魅力や存在が多くの人に届きます。知名度が低く、メンバーが足りない悩みを解決します。</div>
+          </div>
+          <div class="app_function">
+            <div class="function_name">コメント</div>
+            <div class="function_description">ツイートしたチームに対してコメントを送ってみましょう。気軽にコミュニケーションを取れますし、チームからお誘いを頂けるかもしれません。積極的にコメント機能を使用してみましょう。</div>
+          </div>
+        </div>
+      </div>
+      <%# try usingの部分 %>
+      <div class="area_try_using">
+        <div class="head_home">
+          <div class="head_message">try using</div>
+          <div class="head_message_mini">ーアプリを使ってみようー</div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="try_description">あなたにマッチしたスポーツチームに出会おう！<br><br>新規登録はたったの１分で完了します！<br><br>まずは右のボタンをクリック！<b class="right_btn">➡︎</b></p>
+            </div>
+            <div class="try_btn">
+              <P class="try_messages">初めての方はこちら！</P>
+              <%= link_to "新規登録", new_user_registration_path, class: :try_devise_btn %>
+              <P class="try_messages">登録済みの方はこちら！</P>
+              <%= link_to "ログイン", new_user_session_path, class: :try_devise_btn %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="top_footer">
+          <div class="top_btn" id="btn">トップへ</div>
+          <p class="copyright">Copyright © sports tweet app All Rights Reserved.</p>
+        </div>
+      </footer>
+  </body>
+</html>

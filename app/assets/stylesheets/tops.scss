@@ -1,0 +1,215 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ヘッダー
+
+.header_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+  padding: 0 50px;
+}
+
+.nav_btn_top{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left:  20px;
+  font-size: 0.8em;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(123, 123, 123) solid;
+  transition: 0.4s ease;
+  border-radius: 15px;
+  background-color: #fff;
+}
+  
+.nav_btn_top:hover{
+  color: black;
+  background-image: linear-gradient(to left, #dcd3ff 0%, hsl(259, 98%, 84%) 100%);
+  border-radius: 15px;
+}
+
+.top_page_container{
+  position: relative;
+  height: calc(100vh - 135px);
+  background-size: cover;
+}
+
+.top_message1{
+  position: absolute;
+  color: #999;
+  font-size: 50px;
+  top: 180px;
+  left: 600px;
+}
+
+.top_message2{
+  position: absolute;
+  font-size: 50px;
+  color: #999;
+  top: 300px;
+  left: 600px;
+}
+
+.just{
+  color: #af9bff;
+  font-size: 60px;
+  margin: 0 10px;
+}
+
+.team{
+  color: #af9bff;
+  font-size: 60px;
+  margin: 0 10px;
+}
+
+// 2分割レイアウト
+
+.head_home{
+  display: block;
+}
+
+.head_message{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 65px;
+  margin-left: 110px;
+}
+
+.head_message_mini{
+  font-size: 16px;
+  margin-left: 110px;
+}
+
+.area_top_page{
+  height: 600px;
+  padding: 50px;
+  margin: 70px 0;
+}
+
+.body_home{
+  padding: 0 20px;
+}
+
+.layout_2_div{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 100px 0 50px 147px;
+}
+
+.layout_2_div > div{
+  width: 40%;
+}
+
+.text_home .ttl {
+  font-size: 37px;
+  margin: 20px 0 20px;
+}
+
+.text_home .description{
+  width: 550px;
+  font-size: 20px;
+  margin-top: 50px;
+  line-height: 35px;
+}
+
+.important_message{
+  font-size: 37px;
+  color: #af9bff;
+}
+
+.share_img{
+  margin-top: 32px;
+}
+
+// 機能部分
+
+.area_function{
+  height: 1020px;
+  padding: 50px;
+  margin: 70px 0;
+}
+
+.app_function{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  margin: 30px 0 0 200px;
+  height: 150px;
+  border-bottom: 1px solid black;
+}
+
+.function_bottom_space{
+  height: 100px;
+}
+
+.function_name{
+  font-size: 27px;
+}
+
+.function_description{ 
+  height: 120px;
+  width: 400px;
+}
+
+// try usingの部分
+
+.area_try_using{
+  height: 400px;
+  padding: 50px;
+  margin: 70px 0;
+}
+
+.try_description{
+  font-size: 20px;
+}
+
+.right_btn{
+  font-size: 23px;
+    color: #d3c7ff;
+}
+
+.try_devise_btn{
+  text-align: center;
+  display: block;
+  padding: 10px;
+  margin: 15px;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(123, 123, 123) solid;
+  transition: 0.4s ease;
+  border-radius: 20px;
+  background-color: #e2dbff;
+}
+
+.try_messages{
+  font: 10px;
+  text-align: center;
+}
+
+// フッター
+
+.top_footer{
+  height: 150px;
+  background-color: #e2dbff;
+  padding: 35px 300px;
+  margin-top: 200px;
+}
+
+.top_btn {
+  color: #7b7b7b;
+  width: 78px;
+  margin: 0 0 30px 375px;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.copyright{
+    text-align: center;
+}
