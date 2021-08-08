@@ -18,14 +18,14 @@
           </div>
           <% if user_signed_in? %>
           <div class="nav_right">
-            <%= link_to "ツイート", root_path, class: :nav_btn_top %>
+            <%= link_to "ツイート", tweets_path, class: :nav_btn_top %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn_top %>
             <i class="fas fa-user fa-fw"></i>
             <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
           </div>  
         <% else %>
           <div class="nav_right">
-            <%= link_to "ツイート", root_path, class: :nav_btn_top %>
+            <%= link_to "ツイート", tweets_path, class: :nav_btn_top %>
             <%= link_to "ログイン", new_user_session_path, class: :nav_btn_top %>
             <%= link_to "新規登録", new_user_registration_path, class: :nav_btn_top %>
           </div>
@@ -35,9 +35,9 @@
     <%# メイン %>
     <main>
       <div class="area_top_view">
-        <div class="container" style="background-image: url('<%= asset_path('tweet.png') %>')");>
+        <div class="container" style="background-image: url('<%= asset_path('sports_image.png') %>')");>
           <div class="top_message1">あなたに<b class="just">マッチ</b>した、</div>
-          <div class="top_message2"><b class="team">スポーツチーム</b>を見つけよう！</div>
+          <div class="top_message2"><b class="team">スポーツチーム</b>が見つかる</div>
         </div>
       </div>
     </main>
@@ -81,7 +81,7 @@
           </div>
           <div class="app_function">
             <div class="function_name">コメント</div>
-            <div class="function_description">ツイートしたチームに対してコメントを送ってみましょう。気軽にコミュニケーションを取れますし、チームへのお誘いを頂けるかもしれません。積極的にコメント機能を使用してみましょう。</div>
+            <div class="function_description">ツイートしたチームに対してコメントを送ってみましょう。気軽にコミュニケーションを取れますし、チームからお誘いを頂けるかもしれません。積極的にコメント機能を使用してみましょう。</div>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
         <div class="body_home">
           <div class="layout_2_div">
             <div class="text_home">
-              <p class="try_description">アプリを使って、スポーツチームに出会おう！<br><br>新規登録はたったの１分で完了します！<br><br>まずは右のボタンをクリック！<b class="right_btn">➡︎</b></p>
+              <p class="try_description">あなたにマッチしたスポーツチームに出会おう！<br><br>新規登録はたったの１分で完了します！<br><br>まずは右のボタンをクリック！<b class="right_btn">➡︎</b></p>
             </div>
             <div class="try_btn">
               <P class="try_messages">初めての方はこちら！</P>

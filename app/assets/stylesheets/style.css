@@ -79,7 +79,7 @@ input:-webkit-autofill {
   font-size: 25px;
   padding: 10px;
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #dcd3ff 0%, hsl(260, 45%, 65%) 100%);
+  background-image: linear-gradient(to left, #f0ecff 0%, hsl(260, 89%, 89%) 100%);
 }
 
 .nav_btn{
