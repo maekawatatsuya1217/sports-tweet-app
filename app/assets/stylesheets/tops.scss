@@ -213,3 +213,19 @@
 .copyright{
     text-align: center;
 }
+
+// アニメーション
+
+.anime_up{
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+ 
+.anime_up.show {
+  opacity: 1;
+  transform: none;
+}
+ 
+.anime_op{
+  transform: translate(0, 200px);
+}
