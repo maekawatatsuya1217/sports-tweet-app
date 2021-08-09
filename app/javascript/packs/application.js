@@ -10,6 +10,7 @@ require("channels")
 require("../comment")
 require("../search")
 require("../btn")
+require("../anime")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
