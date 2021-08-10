@@ -13,13 +13,13 @@ class Category < ActiveHash::Base
         { id: 11, name: '雪上スポーツ'},
         { id: 12, name: '自転車競技'},
         { id: 13, name: '卓球'},
-        { id: 14, name: '弓道'}
-        { id: 15, name: '柔道'}
-        { id: 16, name: 'バレーボール'}
-        { id: 17, name: 'バスケットボール'}
-        { id: 18, name: 'ソフトボール'}
-        { id: 19, name: 'フットボール'}
-        { id: 20, name: 'ラグビー'}
+        { id: 14, name: '弓道'},
+        { id: 15, name: '柔道'},
+        { id: 16, name: 'バレーボール'},
+        { id: 17, name: 'バスケットボール'},
+        { id: 18, name: 'ソフトボール'},
+        { id: 19, name: 'フットボール'},
+        { id: 20, name: 'ラグビー'},
         { id: 21, name: 'その他'}
     ]
 
