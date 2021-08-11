@@ -1,9 +1,13 @@
-<% @user.followers.each do |user| %>
-<table>
-<tr>
-  <td>  <%= user.username %> </td>
-  <td><%= link_to '詳細', user_path(user) %></td>
-</tr>
-
-</table>
+<% if @user.followers.length != 0 %>
+  <% @user.followers.each do |user| %>
+  <table>
+  <tr>
+    <td>  <%= user.name %> </td>
+    <td><%= link_to '詳細', user_path(user) %></td>
+  </tr>
+  </table>
+  <% end %>
+<% else %>
+  <h2 class="tweet_post_message">フォロワーがいません。</h2>
+  <%= image_tag 'new_tweet.png', class: :tweet_img %>
 <% end %>
