@@ -1,12 +1,17 @@
 <% if @user.followers.length != 0 %>
-  <% @user.followers.each do |user| %>
-  <table>
-  <tr>
-    <td>  <%= user.name %> </td>
-    <td><%= link_to '詳細', user_path(user) %></td>
-  </tr>
-  </table>
-  <% end %>
+  <h2 class="relationship_list_message">フォロワー表示</h2>
+  <div class="follower_content">
+    <div class="relationship_list_area">
+      <% @user.followers.each do |user| %>
+      <table class="user_show_line">
+      <tr>
+        <td>  <%= user.name %> </td>
+        <td><%= link_to 'プロフィール', user_path(user), class: :relationship_profile %></td>
+      </tr>
+      </table>
+      <% end %>
+    </div>
+  </div>
 <% else %>
   <h2 class="tweet_post_message">フォロワーがいません。</h2>
   <%= image_tag 'new_tweet.png', class: :tweet_img %>
