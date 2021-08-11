@@ -20,6 +20,8 @@
 }
     
 .user_edit_parent{
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
   
@@ -38,7 +40,7 @@
   
 .user_edit_child:hover{
   color: black;
-  background: rgb(140, 250, 140);
+  background: rgb(224, 193, 254);
 }
   
 .user_name{

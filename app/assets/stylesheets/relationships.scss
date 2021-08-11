@@ -1,3 +1,43 @@
 // Place all the styles related to the relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// つながるボタン
+
+.follow_btn{
+    width: 100px;
+    padding: 0.4em 1.6em;
+    text-align: center;
+    margin: 0px 0px 40px 20px;
+    border: 1px solid #e6e6e6;
+    font-size: 0.8em;
+    color: black;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 15px;
+  }
+  
+  .follow_btn:hover{
+    color: black;
+    background: rgb(224, 193, 254);
+  }
+
+  .follow_back_btn{
+    width: 130px;
+    padding: 0.4em 1.6em;
+    text-align: center;
+    margin: 0px 0px 40px 20px;
+    border: 1px solid #e6e6e6;
+    font-size: 0.8em;
+    color: black;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 15px;
+  }
+  
+  .follow_back_btn:hover{
+    color: black;
+    background: rgb(224, 193, 254);
+  }
