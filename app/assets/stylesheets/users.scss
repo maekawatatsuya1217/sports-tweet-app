@@ -20,6 +20,8 @@
 }
     
 .user_edit_parent{
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
   
@@ -38,7 +40,7 @@
   
 .user_edit_child:hover{
   color: black;
-  background: rgb(140, 250, 140);
+  background: rgb(224, 193, 254);
 }
   
 .user_name{
@@ -84,4 +86,59 @@
 
 .user_card_bottom{
   height: 100px;
+}
+
+// フォローに関する部分
+
+.stats{
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 40px;
+}
+
+.text_gap{
+  margin: 13px;
+}
+
+// フォロワー一覧表示ページ
+
+.relationship_list_message{
+  text-align: center;
+}
+
+.follower_content{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 450px;
+  margin: 50px auto 0;
+  border-radius: 35px;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.relationship_list_area{
+  height: 410px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  overflow: scroll;
+}
+
+.user_show_line{
+  width: 310px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  border-top: .125em solid #d0c5ff;
+  border-bottom: .125em solid #d0c5ff;
+}
+
+.relationship_profile{
+  color: #999;
+}
+
+.relationship_profile:hover{
+  text-decoration: underline;
 }

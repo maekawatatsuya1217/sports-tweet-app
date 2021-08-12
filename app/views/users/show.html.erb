@@ -7,6 +7,8 @@
         <%= "#{@user.name}さんの情報"%>
       </h2>
 
+      <%= render 'stats' %>
+
       <% if user_signed_in? && current_user.id == @user.id %>
         <div class="user_edit_parent">
           <%= link_to "編集", edit_user_path(@user), class: :user_edit_child %>
@@ -14,6 +16,7 @@
         </div>
       <% else %>
         <div class="user_edit_parent">
+          <%= render partial: 'relationships/follow_btn', user: @user %>
           <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% end %>
