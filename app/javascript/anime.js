@@ -1,4 +1,8 @@
 window.onload=function(){
+
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+
   var scroll = document.querySelectorAll('.anime_up');
      
   var Animation = function() {
@@ -11,4 +15,4 @@ window.onload=function(){
     }
     window.addEventListener('scroll', Animation);
     
-  }                     
+  }             
