@@ -70,18 +70,20 @@
 
 .head_home{
   display: block;
+  border-left: 5px solid #c6b8ff ;
+  margin-left: 110px;
 }
 
 .head_message{
   display: flex;
   justify-content: flex-start;
   font-size: 65px;
-  margin-left: 110px;
+  margin-left: 10px;
 }
 
 .head_message_mini{
   font-size: 16px;
-  margin-left: 110px;
+  margin-left: 10px;
 }
 
 .area_top_page{
