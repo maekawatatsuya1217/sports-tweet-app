@@ -216,7 +216,7 @@
     text-align: center;
 }
 
-// アニメーション
+// スクロールアニメーション
 
 .anime_up{
   opacity: 0;
@@ -230,4 +230,43 @@
  
 .anime_op{
   transform: translate(0, 200px);
+}
+
+// ローディング
+
+#loading{
+  height: 100vh;
+  width: 100vw;
+  transition: all 3s;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.spinner{
+  width: 500px;
+  height: 500px;
+  margin: 200px auto;
+  background-color: rgb(218, 167, 255);
+  border-radius: 100%;
+  animation: sk-scaleout 1.2s infinite ease-in-out;
+}
+
+
+// ローディングアニメーション
+
+@keyframes sk-scaleout {
+0% {
+  transform: scale(0);
+} 100% {
+  transform: scale(1.0);
+  opacity: 0;
+}
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
 }
