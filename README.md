@@ -131,7 +131,7 @@ Rspec
 VSCode
  
 
-##user
+## user
 
 | Column         | Type   | Options  |
 | -------------- | ------ | -------- |
@@ -142,8 +142,11 @@ VSCode
 
  - has_many :tweets
  - has_many :comments
+ - has_many :room_users
+ - has_many :rooms, through: :room_users
+ - has_many :messages
 
- ##tweets
+ ## tweets
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
@@ -157,7 +160,7 @@ VSCode
 - has_many :comments
 
 
-##comments
+## comments
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
@@ -167,3 +170,37 @@ VSCode
 
 - belongs_to :user
 - belongs_to :tweet
+
+
+## rooms
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
+
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
+
+
+## room_users
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+- belongs_to :room
+- belongs_to :user
+
+
+## messages
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+- belongs_to :room
+- belongs_to :user
