@@ -17,7 +17,6 @@
       <% else %>
         <div class="user_edit_parent">
           <%= render partial: 'relationships/follow_btn', user: @user %>
-          <%= link_to "DM", messages_path, class: :dm_btn %>
           <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% end %>
